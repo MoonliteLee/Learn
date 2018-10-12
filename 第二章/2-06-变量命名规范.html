@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>变量命名</title>
+  <script>
+
+    // 字母 数字 下划线 $
+    // 排在第一位 : 字母 下划线 $
+    // 大小写敏感
+    // 容易出现变量污染
+
+    // 题目 1: 输出 100 以内的奇数之和
+    function do1() {
+      let num = 0;
+      for (let i = 0; i < 100; i++) {
+        num += i % 2 === 1 ? i : 0;
+      }
+      return num;
+    }
+
+    // 题目 2: 打印输出 100 以内的素数
+    function do2() {
+      let nums = [];
+      for (let i = 2; i < 100; i++) {
+        nums.push(i);
+        for (let j = 2; j < i; j++) {
+          if (i % j === 0) {
+            nums.pop();
+            break;
+          }
+        }
+      }
+      return nums;
+    }
+
+    // 题目 3: 打*
+    function do3(row) {
+      let str = '';
+      for (let i = 1; i < row * 2; i += 2) {
+        for (let n = row - i / 2; n > 0; n--) {
+          str += '\040';
+        }
+        for (let m = i; m > 0; m--) {
+          str += '*';
+        }
+        str += '\n';
+      }
+      return str;
+    }
+
+    function do3else(row) {
+      row *= 2;
+      let i = 0;
+      let forward = true;
+      setInterval(() => {
+        let str = '';
+        if (forward && (i += 2) <= row || !forward && (i -= 2) > 0) {
+          for (let n = row - i / 2; n > 0; n--) {
+            str += '\040';
+          }
+          for (let m = i; m > 0; m--) {
+            str += '*';
+          }
+          str += '\n';
+        } else {
+          forward = !forward;
+        }
+        console.log(str);
+      }, 250);
+    }
+
+    // console.log(do3(5));
+    console.log(do3else(5));
+
+    // document.write(do3());
+
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
