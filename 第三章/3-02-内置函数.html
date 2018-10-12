@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3-02-内置函数</title>
+  <script>
+    // eval();函数作用:将字符串当成JS语句来执行;
+    // 1.执行表达式的计算
+    // 2.处理ajax回传的JSON数据;
+    // document.write("2+3");
+    // document.write(eval("3+2"));
+    // eval("var a = 12");
+
+    // JSON(Javascript odject notation) : 
+    // 是一种轻量级的数据交换格式,可以采用文本格式储存数据
+
+    var str = "{a:'name',b:'age',c:'sex'}";
+    eval("var o =" +str);
+    document.write(o.a);
+
+    eval("var x = 1,y = 2; document.write(x + y)");
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

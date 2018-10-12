@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <title>3-05-匿名函数</title>
+
+  <script>
+    // 变量污染 覆盖
+
+    // 自执行函数
+  // 1.第一种自执行函数 推荐
+  // ( function (){
+  //   alert("hello");
+  // }) ();
+  // // 2.第二种自执行函数
+  // ( function (arg){
+  //   alert(arg);
+  // }('hello'));
+
+  // JS中函数可以当作变量赋值
+  // 匿名函数是不存在函数提升的
+  var a = function (){
+    alert('hello');
+  }
+  a();
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
