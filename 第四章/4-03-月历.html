@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4-03-月历</title>
+  <style>
+    td {
+      border: 1px;
+      border-style: double;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+
+    <tr>
+      <td id="month" colspan="7">1</td>
+    </tr>
+    <tr>
+      <td>日</td>
+      <td>一</td>
+      <td>二</td>
+      <td>三</td>
+      <td>四</td>
+      <td>五</td>
+      <td>六</td>
+    </tr>
+
+    <tr id="01"></tr>
+    <tr id="02"></tr>
+    <tr id="03"></tr>
+    <tr id="04"></tr>
+    <tr id="05"></tr>
+
+  </table>
+  <tr><td colspan="5"></td></tr>
+
+</body>
+<script>
+
+  function c(year, month) {
+    const date = new Date(year, month);
+    const count = new Date(year, month + 1, 0).getDate();
+    let cal = '<table>';
+
+    cal += `<tr><td id="month" colspan="7">${date}</td></tr>`;
+    cal += `<tr><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td></tr>`;
+
+    let d = 1 - date.getDay();
+    // cal += `<tr><td colspan="${date.getDay() % 7}"></td>`
+    // for (let i = date.getDay(); i < 7; i++) {
+    //   cal += `<td>${d++}</td>`;
+    // }
+    // cal += `</tr>`;
+    while (d <= count) {
+      cal += `<tr>`;
+      for (let i = 0; i < 7 && d <= count; i++) {
+        cal += `<td>${d++ > 0 ? d - 1 : ''}</td>`;
+      }
+      cal += `</tr>`;
+    }
+
+    cal += '</table>';
+    return cal;
+  }
+
+  function calender(month) {
+    let html = '';
+    // html = ''
+    document.getElementById('month').innerHTML = month;
+    return
+
+  }
+  document.write(c(2018, 2));
+  // window.onload = calender('2018年9月');
+  // var week = new Date(2018, 8);
+
+</script>
+
+</html>

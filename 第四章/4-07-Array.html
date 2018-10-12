@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4-07-Array</title>
+</head>
+<script>
+
+  // 数字定义 --字面量
+  // (允许数组元素为混合类型)
+  let arr1 = [1, 2, 3, 4];
+  let arr2 = [1, 2, 3, 'hello'];
+  let arr = [];
+  arr.push(4);
+  arr.push(1);
+  arr.push(2);
+  arr.push(3);
+  // 在数组尾部添加一个元素
+
+  // arr.push(0)
+  // Array对象-属性-length
+  console.log(`原数组: ${arr}`);
+  // arr.pop();
+  // 在数组尾部弹出一个元素
+  // console.log(`处理后: ${arr}`);
+
+  // arr.shift();
+  // 在数组头部去掉一个元素
+  // console.log(`数组: ${arr}`);
+  // arr.unshift(5);
+  // console.log(`数组: ${arr}`);
+
+  // let darr = [1, 2, 3];
+  // darr.push([11, 22, 33]);
+
+  // console.log(`数组: ${arr.join('-')} `);
+  // join 加入分隔符
+
+  // arr = ['X','y','a','e','A','5','622'];
+  // let temp = arr.sort();
+  // console.log(temp);
+  // console.log(arr);
+  // console.log(`数组：${arr.sort()}`);
+  // ascll 顺序
+
+  arr.sort((a, b) => {
+    return a - b;
+  });
+  // a - b 升序 a > b
+  // b - a 降序 a < b
+
+  
+
+
+
+  // function doPush(arr) {
+  //   arr.push(Math.round(Math.random()));
+  //   console.log(arr);
+  // }
+
+  // function doPop(arr) {
+  //   arr.pop();
+  //   console.log(arr);
+  // }
+
+  // arr.forEach((v, i) => {
+  //   if (i > 1) {
+  //     console.log(v); 
+  //   }
+  // });
+
+  // for (let i = 0; i < arr.length; i++)  {
+  //   let v = arr[i]
+  // }
+  // console.log(arr1);
+  // console.log(arr2);
+
+  // arr1 = new Array(10);
+  // arr1[0] = 1;
+  // arr1[9] = 2;
+  // arr1[10] = 10;
+  // 数组长度可增
+
+  // let arr2 = new Array(1,2,3,4);
+  // let arr2 = [1,2,3,4];
+  // 一致
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
