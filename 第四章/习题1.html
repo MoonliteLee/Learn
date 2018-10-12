@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>习题1</title>
+</head>
+
+<body>
+  <input type="text" name="name" id="name">
+  <button onclick="register()">注册</button>
+  <div id="info"></div>
+</body>
+
+<script>
+  // function register() {
+
+  //   let name = document.getElementById('name').value;
+  //   let info = document.getElementById('info');
+
+  //   if (name.length < 3) {
+  //     info.innerHTML = `用户名 ${name} 长度小于 3</br>`;
+  //   } else if (name.length > 10) {
+  //     info.innerHTML = `用户名 ${name} 长度大于 10</br>`;
+  //   } else if (name.search(/admin/) !== -1) {
+  //     info.innerHTML = `用户名 ${name} 中含有敏感词汇 admin</br>`;
+  //   } else {
+  //     info.innerHTML = `用户名 ${name} 可用`;
+  //   }
+
+  // }
+  function register() {
+    let name = document.getElementById('name').value;
+    if(name.length < 3 || name.length > 10){
+      alert("用户名长度小于3大于10");
+    }
+    if(name.indexOf('admin') != -1){
+      alert('用户名含有敏感词汇admin');
+    }
+  }
+</script>
+
+</html>

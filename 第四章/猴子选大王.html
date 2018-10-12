@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+  // function vote(total, m) {
+  //   let result = [];
+  //   for (let i = 0; i < total; i++) {
+  //     result.push(i + 1);
+  //   }
+  //   let now = 1;
+  //   while (result.length > 1) {
+      
+  //     for (let i = 0; i < result.length; i++) {
+  //       if (now++ === m) {
+  //         result.splice(i--, 1);
+  //         now = 1;
+  //       }
+  //     }
+
+  //   }
+
+  //   console.log(result);
+
+  //   return result;
+  // }
+
+  // vote(5, 3);
+
+  let total = prompt("输入猴子");
+  let kic = prompt("输出第几猴子");
+  let monkey = [];
+
+  for(let i = 1;i <= total; i++ ) {
+
+    monkey.push(i)
+
+  }
+  let ji = 0;
+
+  while(monkey.length > 1) {
+      ji = ji + 1;
+      
+      let head = monkey.shift();
+
+      if(ji%kic != 0) {
+        monkey.push(head);
+      }
+  }
+
+  document.write(`选出的大王是: ` + monkey[0]);
+
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>九九乘法表</title>
+  <style>
+    tr, td {
+      border: 1px;
+      border-style: double;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="table">
+    
+  </table>
+</body>
+
+<script>
+  let table = document.getElementById('table');
+  let tab = '';
+  for(let i = 1; i < 10; i++) {
+    tab += '<tr>';
+    for (let j = 1; j <= i; j++) {
+      tab += `<td>${j} * ${i} = ${i * j}</td>`;
+    }
+    tab += '</tr>'
+  };
+  table.innerHTML = tab;
+</script>
+
+</html>

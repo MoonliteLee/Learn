@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .row {}
+
+    .table {}
+  </style>
+</head>
+
+<body>
+  <div id="calendar">
+    <table>
+      <!-- <tr></tr> -->
+    </table>
+  </div>
+</body>
+
+<script>
+  function auto() {
+    const calendar = document.getElementById('calendar');
+    // 
+  }
+
+  function generateTableRow(cells) {
+    let str = '<tr>';
+    cells.forEach(e => {
+      str += e;
+    });
+  }
+
+  function generateTableCell(context) {
+    return `<td>${context}</td>`;
+  }
+
+
+
+</script>
+
+</html>
